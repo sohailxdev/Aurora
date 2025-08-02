@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -53,6 +53,9 @@ const Navbar = () => {
     { id: 4, text: "blogs", link: "/blogs", multipleLinks: false },
     { id: 5, text: "contact", link: "/contact", multipleLinks: false },
   ];
+  const location = useLocation();
+
+  const isHomePage = location.pathname === "/";
 
   return (
     <>
@@ -73,7 +76,7 @@ const Navbar = () => {
               <li
                 key={index}
                 className={`relative flex items-center h-full group capitalize text-lg font-extralight cursor-pointer transition-opacity duration-300 nav-link
-          ${isScrolled ? "invert" : ""}
+          ${isScrolled && !isHomePage ? "invert" : ""}
         `}
               >
                 {isSingleLink ? (
@@ -104,7 +107,9 @@ const Navbar = () => {
           <Link to="/">
             <img
               src="/logo.png"
-              className={`w-full h-full ${isScrolled ? "invert" : ""}`}
+              className={`w-full h-full ${
+                isScrolled && !isHomePage ? "invert" : ""
+              }`}
               alt="logo"
             />
           </Link>
@@ -112,7 +117,7 @@ const Navbar = () => {
 
         <div
           className={`flex  h-full w-[40%]  font-light justify-end pr-8 items-center gap-6 ${
-            isScrolled ? "invert" : ""
+            isScrolled && !isHomePage ? "invert" : ""
           }`}
         >
           <div
