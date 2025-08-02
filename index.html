@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <meta
+      name="keywords"
+      content="Shirts, Mens shirt, Linen shirt, Cotton shirt, Clothing, Men clothing, Men apparel, House Of Valor, HOUSE OF VALOR, house of valor, Valor"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+NL:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  <!-- GA4 Script -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TGKJY0Q5FB"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js"></script>
+
+    <!-- --------------------------------- -->
+
+    <!-- UAT GTAG CODE -->
+
+    <!-- <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TGKJY0Q5FB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-TGKJY0Q5FB");
+    </script> -->
+
+    <!-- --------------------------------- -->
+
+    <!-- PRODUCTION GTAG CODE-->
+
+    <!-- Google tag (gtag.js) PRODUCTION -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-HPEXCJXSQ3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-HPEXCJXSQ3");
+    </script>
+
+    <!-- --------------------------------- -->
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "585111201298959");
+      fbq("track", "PageView");
+    </script>
+
+    <!-- End Meta Pixel Code -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=585111201298959&ev=PageView&noscript=1"
+    /></noscript> -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
